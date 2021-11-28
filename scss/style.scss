@@ -1,0 +1,383 @@
+@import 'reset.scss';
+@import 'fonts.scss';
+
+body{
+    font-family: GothamPro;
+    color: #2D2D2D;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    max-width: 1180px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 19px;
+    margin-bottom: 10px;
+}
+.page__title-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.swiper-button-disabled svg {
+    opacity: 0.5;
+}
+.discounts-arrow:hover,.category-arrow:hover{
+    background: #57BA41;
+}
+.discounts-arrow:hover svg,.category-arrow:hover svg{
+    fill: #fff;
+}
+
+////////////////////banner
+.banner{
+    &__img{
+        width: 100%;
+        display: block;
+        border-radius: 6px;
+        margin-top: 15px;
+        margin-bottom: 70px;
+        object-fit: contain;
+    }
+    &-swiper-wrapper {
+        position: relative;
+    }
+    &__arr{
+        position: absolute;
+        z-index: 10;
+        top: calc(50% - 40px);
+        cursor: pointer;
+        & svg{
+            width: 40px;
+            height: 40px;
+        }
+    }
+    &__prev{
+        left: 5%;
+        & svg{
+            transform: rotate(-180deg);
+        }
+    }
+    &__next{
+        right: 5%;
+    }
+}
+.swiper-pagination{
+    max-height: 15px;
+    position: absolute;
+        top: 90%;
+    &-bullet{
+        width: 10px;
+        height: 10px;
+        background: rgba(53, 158, 0,1);
+        &-active{
+            background: #57BA41;
+        }
+    }
+}
+////////////////////discounts
+.discounts-swiper{
+    border-top: 1px solid #E5E5E5;
+    border-left: 1px solid #E5E5E5;
+}
+
+.discounts-swiper-wrapper .swiper-slide{
+    padding: 12px;
+    width: calc(100% /5);
+    border-bottom: 1px solid #E5E5E5;
+    border-right: 1px solid #E5E5E5;
+    position: relative;
+    height: auto;
+}
+.action{
+    font-size: 10px;
+	font-weight: 500;
+	line-height: 9.57px;
+	color: #fff;
+	background-color: #FF4A4A;
+	display: inline-block;
+	padding: 5px 6px;
+	border-radius: 6px;
+	position: absolute;
+	top: 5%;
+	left: 10%;
+}
+.discounts{
+    margin-bottom: 50px;
+    &__navigation{
+        display: flex;
+        align-items: center;
+        width: 20%;
+        justify-content: center;
+        border-top: 1px solid #E5E5E5;
+        border-left: 1px solid #E5E5E5;
+        cursor: pointer;
+        & svg{
+            fill: #57BA41;
+        }
+    }
+    &__prev{
+        & svg{
+        transform: rotate(-180deg);
+        }
+    }
+    &-arrow{
+        border-right: 1px solid #E5E5E5;
+        padding: 12px 0;
+        width: calc(100% / 2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & svg{
+            width: 16px;
+            height: 13px;
+        }
+    }
+    &__pic{
+        margin-bottom: 27px;
+    }
+    &__link{
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 7px;
+        display: block;
+    }
+    &__price-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+     }
+     &__old {
+        color: #969696;
+        font-size: 14px;
+        line-height: 13,4px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        & span{
+            text-decoration: line-through;
+            text-decoration-thickness: 2px;
+            text-decoration-color: #FF4A4A;
+         }
+     }
+     &__current {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 19.14px;
+        margin-top: 7px;
+        & span{
+            font-size: 14px;
+        }
+    }
+    &__basket {
+        align-self: center;
+    }
+}
+.discount{
+	color: #FFFFFF;
+	font-size: 10px;
+	font-weight: 400;
+	line-height: 9.57px;
+	background-color: #FF4A4A;
+	padding: 3px 6px 3px 4px;
+	border-radius: 5px;
+	display: inline-block;
+	margin-left: 8px;
+}
+.basket-btn {
+	background-color: #57BA41;
+	padding: 6.85px 15px 7.85px 15px;
+	border-radius: 9px;
+    & svg{
+        width: 20px;
+        height: 20px;
+    }
+
+ }
+ .property__item {
+	position: relative;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 20px;
+	padding-left: 10px;
+ }
+ .property__item::before{
+	 content: ' ';
+	 width: 5px;
+	 height: 5px;
+	 background-color: #57BA41;
+	 border-radius: 50%;
+	 position: absolute;
+	 top: 7px;
+	 left: 0;
+ }
+ ////////////////////category
+ .category{
+    margin-bottom: 50px;
+    &__navigation{
+        display: flex;
+        align-items: center;
+        width: 20%;
+        justify-content: center;
+        border-top: 1px solid #E5E5E5;
+        border-left: 1px solid #E5E5E5;
+        cursor: pointer;
+        & svg{
+            fill: #57BA41;
+            width: 16px;
+            height: 13px;
+        }
+    }
+    &__prev{
+        & svg{
+        transform: rotate(-180deg);
+        }
+    }
+    &-arrow{
+        border-right: 1px solid #E5E5E5;
+        padding: 12px 0;
+        width: calc(100% / 2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+     &__content{
+        display: flex;
+        border-top: 1px solid #E5E5E5;
+        border-left: 1px solid #E5E5E5;
+     }
+     &__menu{
+        width: calc(100% / 5);
+        flex-shrink: 0;
+        border-right: 1px solid #E5E5E5;
+        border-bottom: 1px solid #E5E5E5;
+    }
+    &__list{
+       padding: 10px 8px 0px 17px;
+       max-height: 330px;
+       overflow: hidden;
+    }
+    &__list--active{
+        max-height: fit-content;
+    }
+    &__link{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #000000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & svg{
+            width: 7px;
+            height: 17px;
+        }
+    }
+    &__item{
+        margin-bottom: 12px;
+    }
+    &__show-button{
+        display: none;
+        position: relative;
+    }
+    // &__show-button::after{
+    //     content: '';
+    //     width: 7px;
+    //     height: 7px;
+    //     border-right: 1.5px solid #57BA41;
+    //     border-bottom: 1.5px solid #57BA41;
+    //     transform: rotate(45deg);
+    //     position: absolute;
+    //     top: 5px;
+    //     left: 110px;
+    // }
+    &__hide-button{
+        display: none;
+        margin-bottom: 12px;
+        position: relative;
+    }
+    &__hide-button::after{
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-right: 1.5px solid #57BA41;
+        border-bottom: 1.5px solid #57BA41;
+        transform: rotate(-135deg);
+        position: absolute;
+        top: 9.5px;
+        left: 70px;
+    }
+    &__nav-button--active{
+        display: block;
+    }
+    &__banner{
+        width: calc(100% / 5);
+        flex-shrink: 0;
+        height: 360px;
+        background-color: #57BA41;
+        border-right: 1px solid #E5E5E5;
+        border-bottom: 1px solid #E5E5E5;
+    }
+    &__cell{
+        height: 180px;
+    }
+    &__title{
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 500;
+        text-align: center;
+        color: #000000;
+    }
+    &__img{
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+ }
+.category__link:hover, .nav__btn:hover{
+	color: #57BA41;
+	font-weight: 500;
+}
+.nav__btn{
+	font-size: 12px;
+	line-height: 20px;
+	color: #57BA41;
+	padding-left: 17px;
+}
+.category-swiper-wrapper .swiper-slide{
+    max-width: calc(100% / 3);
+    height: 360px;
+    border-right: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+}
+.category-swiper-wrapper .swiper-slide>div:nth-child(1){
+    border-bottom: 1px solid #E5E5E5;
+}
+ ////////////////////category-clon
+ .category{
+     &__doublecell{
+        height: 360px;
+        padding-top: 108px;
+    }
+ }
+ .category-swiper-clon-wrapper .swiper-slide{
+    max-width: calc(100% / 4);
+    height: 360px;
+    border-right: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+}
+.category-swiper-clon-wrapper .swiper-slide>div:nth-child(1){
+    border-bottom: 1px solid #E5E5E5;
+}
+.category-clon__prev{
+    & svg{
+        transform: rotate(-180deg);
+    }
+}
+@import "media.scss";
